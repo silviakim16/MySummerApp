@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0270099282E09939B6E3963D /* Pods_SummerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BFF3ADE70127E10AAEBE8B /* Pods_SummerApp.framework */; };
 		FBCBB7631F1E708200D16AE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCBB7621F1E708200D16AE1 /* AppDelegate.swift */; };
 		FBCBB7651F1E708200D16AE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCBB7641F1E708200D16AE1 /* ViewController.swift */; };
 		FBCBB7681F1E708200D16AE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCBB7661F1E708200D16AE1 /* Main.storyboard */; };
 		FBCBB76B1F1E708200D16AE1 /* SummerApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBCBB7691F1E708200D16AE1 /* SummerApp.xcdatamodeld */; };
 		FBCBB76D1F1E708200D16AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBCBB76C1F1E708200D16AE1 /* Assets.xcassets */; };
 		FBCBB7701F1E708200D16AE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCBB76E1F1E708200D16AE1 /* LaunchScreen.storyboard */; };
+		FBCBB77E1F1E714900D16AE1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBCBB77D1F1E714900D16AE1 /* GoogleService-Info.plist */; };
+		FBCBB7811F1E744300D16AE1 /* FbDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCBB7801F1E744300D16AE1 /* FbDatabase.swift */; };
+		FBCBB7831F1E79F300D16AE1 /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCBB7821F1E79F300D16AE1 /* AppDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69BFF3ADE70127E10AAEBE8B /* Pods_SummerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SummerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A3AEB9665659D77E05BE836 /* Pods-SummerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SummerApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SummerApp/Pods-SummerApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C4075B127ABD5094E32350E8 /* Pods-SummerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SummerApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SummerApp/Pods-SummerApp.release.xcconfig"; sourceTree = "<group>"; };
 		FBCBB75F1F1E708200D16AE1 /* SummerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SummerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCBB7621F1E708200D16AE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBCBB7641F1E708200D16AE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		FBCBB76C1F1E708200D16AE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBCBB76F1F1E708200D16AE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBCBB7711F1E708200D16AE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBCBB77D1F1E714900D16AE1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FBCBB7801F1E744300D16AE1 /* FbDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FbDatabase.swift; sourceTree = "<group>"; };
+		FBCBB7821F1E79F300D16AE1 /* AppDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0270099282E09939B6E3963D /* Pods_SummerApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79ADEE6C7C1EBB71F1BBE71F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69BFF3ADE70127E10AAEBE8B /* Pods_SummerApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		876BF6CB55497C8DCA4585EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A3AEB9665659D77E05BE836 /* Pods-SummerApp.debug.xcconfig */,
+				C4075B127ABD5094E32350E8 /* Pods-SummerApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FBCBB7561F1E708200D16AE1 = {
 			isa = PBXGroup;
 			children = (
 				FBCBB7611F1E708200D16AE1 /* SummerApp */,
 				FBCBB7601F1E708200D16AE1 /* Products */,
+				876BF6CB55497C8DCA4585EB /* Pods */,
+				79ADEE6C7C1EBB71F1BBE71F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +86,74 @@
 		FBCBB7611F1E708200D16AE1 /* SummerApp */ = {
 			isa = PBXGroup;
 			children = (
-				FBCBB7621F1E708200D16AE1 /* AppDelegate.swift */,
+				FBCBB77F1F1E740B00D16AE1 /* Firebase */,
+				FBCBB77B1F1E710500D16AE1 /* Core Data */,
+				FBCBB77A1F1E70F200D16AE1 /* Storyboards */,
+				FBCBB7791F1E70BD00D16AE1 /* Controllers */,
+				FBCBB7781F1E70AD00D16AE1 /* Models */,
+				FBCBB7771F1E709D00D16AE1 /* Views */,
+				FBCBB77C1F1E712000D16AE1 /* Supporting */,
+			);
+			path = SummerApp;
+			sourceTree = "<group>";
+		};
+		FBCBB7771F1E709D00D16AE1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FBCBB7781F1E70AD00D16AE1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FBCBB7791F1E70BD00D16AE1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				FBCBB7641F1E708200D16AE1 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		FBCBB77A1F1E70F200D16AE1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
 				FBCBB7661F1E708200D16AE1 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		FBCBB77B1F1E710500D16AE1 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				FBCBB7691F1E708200D16AE1 /* SummerApp.xcdatamodeld */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		FBCBB77C1F1E712000D16AE1 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				FBCBB77D1F1E714900D16AE1 /* GoogleService-Info.plist */,
+				FBCBB7621F1E708200D16AE1 /* AppDelegate.swift */,
 				FBCBB76C1F1E708200D16AE1 /* Assets.xcassets */,
 				FBCBB76E1F1E708200D16AE1 /* LaunchScreen.storyboard */,
 				FBCBB7711F1E708200D16AE1 /* Info.plist */,
-				FBCBB7691F1E708200D16AE1 /* SummerApp.xcdatamodeld */,
 			);
-			path = SummerApp;
+			name = Supporting;
+			sourceTree = "<group>";
+		};
+		FBCBB77F1F1E740B00D16AE1 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				FBCBB7801F1E744300D16AE1 /* FbDatabase.swift */,
+				FBCBB7821F1E79F300D16AE1 /* AppDatabase.swift */,
+			);
+			name = Firebase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FBCBB7741F1E708200D16AE1 /* Build configuration list for PBXNativeTarget "SummerApp" */;
 			buildPhases = (
+				C6539555ED65C2D88B6EB637 /* [CP] Check Pods Manifest.lock */,
 				FBCBB75B1F1E708200D16AE1 /* Sources */,
 				FBCBB75C1F1E708200D16AE1 /* Frameworks */,
 				FBCBB75D1F1E708200D16AE1 /* Resources */,
+				330E6B310CDEC4329537D561 /* [CP] Embed Pods Frameworks */,
+				EF175587334734BA74914FDF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBCBB7701F1E708200D16AE1 /* LaunchScreen.storyboard in Resources */,
+				FBCBB77E1F1E714900D16AE1 /* GoogleService-Info.plist in Resources */,
 				FBCBB76D1F1E708200D16AE1 /* Assets.xcassets in Resources */,
 				FBCBB7681F1E708200D16AE1 /* Main.storyboard in Resources */,
 			);
@@ -134,13 +227,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		330E6B310CDEC4329537D561 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SummerApp/Pods-SummerApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6539555ED65C2D88B6EB637 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EF175587334734BA74914FDF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SummerApp/Pods-SummerApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FBCBB75B1F1E708200D16AE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBCBB7811F1E744300D16AE1 /* FbDatabase.swift in Sources */,
 				FBCBB76B1F1E708200D16AE1 /* SummerApp.xcdatamodeld in Sources */,
 				FBCBB7651F1E708200D16AE1 /* ViewController.swift in Sources */,
+				FBCBB7831F1E79F300D16AE1 /* AppDatabase.swift in Sources */,
 				FBCBB7631F1E708200D16AE1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,11 +405,12 @@
 		};
 		FBCBB7751F1E708200D16AE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A3AEB9665659D77E05BE836 /* Pods-SummerApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SummerApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.silviakim.SummerApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myApp.ios-com.myApp.ios-com.myApp.ios-com.myApp.ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -274,11 +418,12 @@
 		};
 		FBCBB7761F1E708200D16AE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4075B127ABD5094E32350E8 /* Pods-SummerApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SummerApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.silviakim.SummerApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myApp.ios-com.myApp.ios-com.myApp.ios-com.myApp.ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -303,6 +448,7 @@
 				FBCBB7761F1E708200D16AE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
