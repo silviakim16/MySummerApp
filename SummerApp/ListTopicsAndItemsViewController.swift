@@ -13,6 +13,7 @@ class ListTopicsAndItemsViewController: UIViewController, UITableViewDelegate, U
     // MARK: - Properties
     var selectedSchool: School?
     var topic: Topic?
+    var selectedTopicName: String = "About"
     
     
     // MARK: - Outlets
@@ -21,17 +22,25 @@ class ListTopicsAndItemsViewController: UIViewController, UITableViewDelegate, U
     
     // MARK: - Actions
     @IBAction func aboutTopicButtonTapped(_ sender: Any) {
-        if selectedSchool != nil {
-            for tempTopic in selectedSchool!.topics {
-                if tempTopic.name == "About" {
-                    topic = tempTopic
-                    tableView.reloadData()
-                }
-            }
-        }
+        reloadTableForTopic("About")
     }
     
-    //
+    @IBAction func financialTopicButtonTapped(_ sender: Any) {
+       reloadTableForTopic("Grants & Funding")
+    }
+    
+    @IBAction func legalTopicButtonTapped(_ sender: Any) {
+        reloadTableForTopic("Legal Support")
+    }
+    
+    @IBAction func mentalTopicButtonTapped(_ sender: Any) {
+        reloadTableForTopic("Mental Health Support")
+    }
+    
+    @IBAction func academicTopicButtonTapped(_ sender: Any) {
+        reloadTableForTopic("Academic Support")
+
+    }
 
     
     // MARK: - Override Methods
@@ -45,6 +54,20 @@ class ListTopicsAndItemsViewController: UIViewController, UITableViewDelegate, U
         if selectedSchool != nil {
             for tempTopic in selectedSchool!.topics {
                 if tempTopic.name == "About" {
+                    topic = tempTopic
+                    tableView.reloadData()
+                }
+            }
+        }
+    }
+    
+   
+    
+    // MARK: - Methods
+    func reloadTableForTopic(_ name: String) {
+        if selectedSchool != nil {
+            for tempTopic in selectedSchool!.topics {
+                if tempTopic.name == name {
                     topic = tempTopic
                     tableView.reloadData()
                 }

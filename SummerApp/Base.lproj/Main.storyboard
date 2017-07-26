@@ -80,15 +80,31 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Financial" id="XOg-e2-haw"/>
-                                    <barButtonItem title="Legal" width="46" id="eYw-Ga-059"/>
+                                    <barButtonItem title="Financial" id="XOg-e2-haw">
+                                        <connections>
+                                            <action selector="financialTopicButtonTapped:" destination="9jG-o8-SQV" id="eQ8-9m-yGB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Legal" width="46" id="eYw-Ga-059">
+                                        <connections>
+                                            <action selector="legalTopicButtonTapped:" destination="9jG-o8-SQV" id="U0a-F2-7Yv"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="About" width="61" id="dAw-IQ-DlI">
                                         <connections>
                                             <action selector="aboutTopicButtonTapped:" destination="9jG-o8-SQV" id="k84-5z-FpG"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Mental" width="59" id="Eu5-pC-Nhu"/>
-                                    <barButtonItem title="Academic" id="K9Y-rU-H1r"/>
+                                    <barButtonItem title="Mental" width="59" id="Eu5-pC-Nhu">
+                                        <connections>
+                                            <action selector="mentalTopicButtonTapped:" destination="9jG-o8-SQV" id="o0h-ZR-VUp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Academic" id="K9Y-rU-H1r">
+                                        <connections>
+                                            <action selector="academicTopicButtonTapped:" destination="9jG-o8-SQV" id="Amp-MA-XeL"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
