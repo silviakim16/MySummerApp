@@ -9,65 +9,76 @@
 import UIKit
 
 class ListCollegesViewController: UITableViewController {
-
+    
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Second observeSingleEvent gets data from FirebaseDatabase and puts it into snapshot variable
+        //fetchData()
+
+        //Download the data from Firebase using the reference
         FbDatabase.ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            
-            //Third, we accessing database of snapshot and converting it as a Dictionary and assign it to dataDictionary
-            if let dataDictionary = snapshot.value as? [String : Any] {
+
+            //We are going to access the dictionary (data) that was downloaded to snapshot
+            if let dataDictionary = snapshot.value as? [String: Any] {
                 
-                //Fourth, we access the value of the key of the dictionary we just made
-                //and convert it as a Dictionary and assign that dict within a dict to schooldictionary
-                if let schoolsDictionary = dataDictionary["Schools"] as? [String : Any] {
-                    
-                    var counter = 0
-                    
-                    //fifth, it iterates through both the key and value in the schoolsDictionary
-                    for (key, _) in schoolsDictionary {
-                        
-                        //sixth, we go through each key in the schoolsDictionary and append school name from Database
-                        AppDatabase.shared.schools.append(School(name: key))
-                        
-                        //seventh, we want to load all the topics and add them to each school's topic array
-                        if let topicsDictionary = schoolsDictionary[key] as? [String: Any] {
-                        
-                            //
-                            for (key, _) in topicsDictionary {
-                                AppDatabase.shared.schools[counter].topics.append(Topic(name: key))
-                                
-                                //You need to access the dictionaries inside the topicsDictionary values
-                                //and loop again to get the data inside
-                                
-                                
-                            }
-                        }
-                        
-                        counter += 1
-                    }
-                    
-                    self.tableView.reloadData()
-                }
+                //extracts the data into their own classes by passing dictionary
+                Schools.shared.loadSchools(from: dataDictionary)
+                self.tableView.reloadData()
             }
         })
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "displayTopicsAndItemsSegue" {
+                print("College cell tapped. Displaying Topics and Items")
+                let indexPath = tableView.indexPathForSelectedRow!
+                let school = Schools.shared.schools[indexPath.row]
+                
+                let listTopicsAndItemsViewController = segue.destination as! ListTopicsAndItemsViewController
+                listTopicsAndItemsViewController.selectedSchool = school
+            }
+        }
+    }
+    
+    
+    // MARK: - Table View Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AppDatabase.shared.schools.count
+        return Schools.shared.schools.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "listCollegesTableViewCell", for: indexPath) as! ListCollegesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "listCollegesTableViewCell", for: indexPath)
         //retrieving current row
         let row = indexPath.row
         
-        cell.textLabel!.text = AppDatabase.shared.schools[row].name
+        cell.textLabel!.text = Schools.shared.schools[row].name
         
         return cell
     }
     
-
+//    func fetchData() {
+//        FbDatabase.resetSharedDatabase()
+//        FbDatabase.ref.observeSingleEvent(of: .value, with: { (snapshot) in
+//            if let dataDictionary = snapshot.value as? [String : Any] {
+//                if let schoolsDictionary = dataDictionary["Schools"] as? [String : Any] {
+//                    for schoolName in schoolsDictionary.keys {
+//                        let school = School(name: schoolName)
+//                        Schools.shared.schools.append(school)
+//                        
+//                        if let topicsDictionary = schoolsDictionary[schoolName] as? [String: Any] {
+//                            for topicName in topicsDictionary.keys {
+//                                let topic = Topic(name: topicName)
+//                                school.topics.append(topic)
+//                            }
+//                        }
+//                        
+//                    }
+//                }
+//            }
+//            self.tableView.reloadData()
+//        })
+//    }
 }
 
+        
