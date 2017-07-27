@@ -14,7 +14,7 @@ class ListTopicsAndItemsViewController: UIViewController, UITableViewDelegate, U
     var selectedSchool: School?
     var topic: Topic?
     var selectedTopicName: String = "About"
-    
+
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -39,7 +39,6 @@ class ListTopicsAndItemsViewController: UIViewController, UITableViewDelegate, U
     
     @IBAction func academicTopicButtonTapped(_ sender: Any) {
         reloadTableForTopic("Academic Support")
-
     }
 
     
@@ -61,6 +60,19 @@ class ListTopicsAndItemsViewController: UIViewController, UITableViewDelegate, U
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "displayItemInfoContentSegue" {
+                print("Item cell tapped. Displaying ItemInfo Content")
+                let indexPath = tableView.indexPathForSelectedRow!
+                let item = topic!.items[indexPath.row]
+                
+                let listItemInfoContentViewController = segue.destination as! ListItemInfoContentViewController
+                listItemInfoContentViewController.selectedItem = item
+            }
+        }
+    }
+    
    
     
     // MARK: - Methods
@@ -69,6 +81,7 @@ class ListTopicsAndItemsViewController: UIViewController, UITableViewDelegate, U
             for tempTopic in selectedSchool!.topics {
                 if tempTopic.name == name {
                     topic = tempTopic
+                    selectedTopicName = name
                     tableView.reloadData()
                 }
             }

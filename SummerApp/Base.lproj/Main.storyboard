@@ -73,6 +73,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="bGV-Tt-tvN" kind="show" identifier="displayItemInfoContentSegue" id="Fp8-rv-3KS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -124,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="1928.8" y="131.78410794602701"/>
         </scene>
-        <!--View Controller-->
+        <!--List Item Info Content View Controller-->
         <scene sceneID="Gfd-ld-ZTo">
             <objects>
-                <viewController id="bGV-Tt-tvN" sceneMemberID="viewController">
+                <viewController id="bGV-Tt-tvN" customClass="ListItemInfoContentViewController" customModule="SummerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FxJ-UP-VGt"/>
                         <viewControllerLayoutGuide type="bottom" id="iXV-xL-B0l"/>
@@ -143,13 +146,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJE-ZI-67c">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HJE-ZI-67c" secondAttribute="trailing" id="UWO-wP-JBN"/>
+                            <constraint firstItem="HJE-ZI-67c" firstAttribute="leading" secondItem="d3o-HC-JWa" secondAttribute="leading" id="gQx-6e-9Y8"/>
+                            <constraint firstItem="HJE-ZI-67c" firstAttribute="top" secondItem="FxJ-UP-VGt" secondAttribute="bottom" id="qSA-PD-40K"/>
+                            <constraint firstItem="iXV-xL-B0l" firstAttribute="top" secondItem="HJE-ZI-67c" secondAttribute="bottom" id="xsA-ya-W4p"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="HJE-ZI-67c" id="7OY-ga-Kq4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTw-4J-g5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2726" y="132"/>
+            <point key="canvasLocation" x="2725.5999999999999" y="131.78410794602701"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="11d-bO-qz7">

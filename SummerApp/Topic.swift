@@ -23,13 +23,11 @@ class Topic {
         for key in itemDictionary.keys {
             
             //print("\(#function) KEY: \(key)")
-            items.append(Item(name: key))
-        }
-        
-        for item in items {
+            
+            let item = Item(name: key)
+            items.append(item)
             
             if let itemInfoDictionary = itemDictionary[item.name] as? [String: Any] {
-                
                 item.loadItemInfo(from: itemInfoDictionary)
             }
         }
