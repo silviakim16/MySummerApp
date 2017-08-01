@@ -9,6 +9,7 @@
 import UIKit
 
 class ListCollegesViewController: UITableViewController {
+
     
     // MARK: - Override Methods
     override func viewDidLoad() {
@@ -26,6 +27,8 @@ class ListCollegesViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         })
+        
+        self.navigationController?.view.backgroundColor = UIColor.white
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

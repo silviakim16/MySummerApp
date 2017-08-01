@@ -20,7 +20,7 @@ class HTMLConverter {
     //enum is collection of similar values. Can only equal to one thing at a time. 
     //AKA if u have enum for heading, it can't apply same to paragraph and what not
     private enum HTMLElement {
-        case heading, paragraph
+        case heading, paragraph, subtitle
     }
     
     private class func appendIntro() {
@@ -32,6 +32,7 @@ class HTMLConverter {
     private class func append(_ stringValue: String, in tag: HTMLElement) {
         switch tag {
         case .heading: context += "<h1>\(stringValue)</h1>"
+        case .subtitle: context += "<h2>\(stringValue)</h2>"
         case .paragraph: context += "<p>\(stringValue)</p>"
         }
     }
@@ -65,11 +66,17 @@ class HTMLConverter {
                 didFindValue = true
                 HTMLConverter.append(title, in: .heading)
                 isPreviousStringAParagraph = false
+                
+                //The subtitle MUST have the same number as the title it should be under
+                if let subTitle = item["Subtitle\(titleIndex)"] as? String {
+                    HTMLConverter.append(subTitle, in: .subtitle)
+                }
             }
+                
             else {
                 didFindValue = false
             }
-            
+            //
             //This loop will find the paragraphs
             repeat {
                 //If it found a paragraph, access that specific paragraph with ["Paragraph\(Titlendex)(paragraphIndex)"]

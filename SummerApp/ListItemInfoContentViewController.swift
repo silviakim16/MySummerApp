@@ -27,4 +27,21 @@ class ListItemInfoContentViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    open func open(_ url: URL, options: [String : Any] = [:], completionHandler completion: ((Bool) -> Swift.Void)? = nil) {
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+    
+//    <a href="https://icons8.com/icon/25195/Wise-Mind">Wise mind icon credits</a>
+//    
+//    <!-- US Dollar icon by Icons8 -->
+//    <img src="https://png.icons8.com/us-dollar/ios7/25" title="US Dollar" width="25" height="25">
+//    
+//    <a href="https://icons8.com/icon/2341/University">University icon credits</a>
 }
+
+
+
+
+
+

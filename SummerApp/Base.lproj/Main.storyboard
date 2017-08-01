@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List Colleges View Controller-->
+        <!--School-->
         <scene sceneID="an9-hr-rSG">
             <objects>
                 <tableViewController id="tbN-8C-nql" customClass="ListCollegesViewController" customModule="SummerApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,13 +44,13 @@
                             <outlet property="delegate" destination="tbN-8C-nql" id="diK-iS-5oB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="gVT-yb-OjS"/>
+                    <navigationItem key="navigationItem" title="School" id="gVT-yb-OjS"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5W-Va-wSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1165.5999999999999" y="131.78410794602701"/>
         </scene>
-        <!--List Topics And Items View Controller-->
+        <!--Title-->
         <scene sceneID="Srp-rH-cIb">
             <objects>
                 <viewController id="9jG-o8-SQV" customClass="ListTopicsAndItemsViewController" customModule="SummerApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -79,31 +79,34 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="og3-Sd-C9Q">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="og3-Sd-C9Q">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Financial" id="XOg-e2-haw">
+                                    <barButtonItem image="icons8-US Dollar-35" width="29" id="XOg-e2-haw" userLabel="Financial">
                                         <connections>
                                             <action selector="financialTopicButtonTapped:" destination="9jG-o8-SQV" id="eQ8-9m-yGB"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Legal" width="46" id="eYw-Ga-059">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="epp-rm-4kM"/>
+                                    <barButtonItem image="icons8-Law-35" id="eYw-Ga-059" userLabel="Legal">
                                         <connections>
                                             <action selector="legalTopicButtonTapped:" destination="9jG-o8-SQV" id="U0a-F2-7Yv"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="About" width="61" id="dAw-IQ-DlI">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dAy-b3-7OO"/>
+                                    <barButtonItem image="icons8-University-35" id="dAw-IQ-DlI" userLabel="About">
                                         <connections>
                                             <action selector="aboutTopicButtonTapped:" destination="9jG-o8-SQV" id="k84-5z-FpG"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Mental" width="59" id="Eu5-pC-Nhu">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="WyZ-58-SCr"/>
+                                    <barButtonItem image="icons8-Wise Mind-35" id="Eu5-pC-Nhu" userLabel="Mental Health">
                                         <connections>
                                             <action selector="mentalTopicButtonTapped:" destination="9jG-o8-SQV" id="o0h-ZR-VUp"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Academic" id="K9Y-rU-H1r">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mfu-c6-O6o"/>
+                                    <barButtonItem image="icons8-Graduation Cap-35" id="K9Y-rU-H1r" userLabel="Academic">
                                         <connections>
                                             <action selector="academicTopicButtonTapped:" destination="9jG-o8-SQV" id="Amp-MA-XeL"/>
                                         </connections>
@@ -113,12 +116,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="og3-Sd-C9Q" secondAttribute="trailing" id="0cC-mZ-P3o"/>
                             <constraint firstAttribute="trailing" secondItem="OBn-ad-czh" secondAttribute="trailing" id="Bgy-9z-Tgf"/>
+                            <constraint firstItem="n8u-3v-34Y" firstAttribute="top" secondItem="og3-Sd-C9Q" secondAttribute="bottom" id="CV4-YY-g5j"/>
+                            <constraint firstItem="og3-Sd-C9Q" firstAttribute="leading" secondItem="feE-li-imD" secondAttribute="leading" id="DBM-qB-ulH"/>
                             <constraint firstItem="OBn-ad-czh" firstAttribute="leading" secondItem="feE-li-imD" secondAttribute="leading" id="bZa-bT-qif"/>
                             <constraint firstItem="OBn-ad-czh" firstAttribute="top" secondItem="feE-li-imD" secondAttribute="top" id="f2q-ay-jeV"/>
                             <constraint firstItem="n8u-3v-34Y" firstAttribute="top" secondItem="OBn-ad-czh" secondAttribute="bottom" id="qnV-NC-lgk"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="kIx-ex-3xD"/>
                     <connections>
                         <outlet property="tableView" destination="OBn-ad-czh" id="q3r-gk-zpw"/>
                     </connections>
@@ -139,25 +146,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKJ-Sb-M2E">
-                                <rect key="frame" x="16" y="20" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJE-ZI-67c">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="HJE-ZI-67c" secondAttribute="trailing" id="UWO-wP-JBN"/>
-                            <constraint firstItem="HJE-ZI-67c" firstAttribute="leading" secondItem="d3o-HC-JWa" secondAttribute="leading" id="gQx-6e-9Y8"/>
-                            <constraint firstItem="HJE-ZI-67c" firstAttribute="top" secondItem="FxJ-UP-VGt" secondAttribute="bottom" id="qSA-PD-40K"/>
-                            <constraint firstItem="iXV-xL-B0l" firstAttribute="top" secondItem="HJE-ZI-67c" secondAttribute="bottom" id="xsA-ya-W4p"/>
+                            <constraint firstItem="HJE-ZI-67c" firstAttribute="leading" secondItem="d3o-HC-JWa" secondAttribute="leading" id="9lY-qf-Jxh"/>
+                            <constraint firstAttribute="trailing" secondItem="HJE-ZI-67c" secondAttribute="trailing" id="WZe-QQ-bFb"/>
+                            <constraint firstItem="HJE-ZI-67c" firstAttribute="top" secondItem="d3o-HC-JWa" secondAttribute="top" id="flx-Lh-RwG"/>
+                            <constraint firstItem="iXV-xL-B0l" firstAttribute="top" secondItem="HJE-ZI-67c" secondAttribute="bottom" id="r2F-Sv-Hp0"/>
                         </constraints>
                     </view>
                     <connections>
@@ -187,4 +187,11 @@
             <point key="canvasLocation" x="294" y="132"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-Graduation Cap-35" width="35" height="35"/>
+        <image name="icons8-Law-35" width="35" height="35"/>
+        <image name="icons8-US Dollar-35" width="35" height="35"/>
+        <image name="icons8-University-35" width="35" height="35"/>
+        <image name="icons8-Wise Mind-35" width="35" height="35"/>
+    </resources>
 </document>

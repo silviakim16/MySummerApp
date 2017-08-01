@@ -23,22 +23,29 @@ class ListTopicsAndItemsViewController: UIViewController, UITableViewDelegate, U
     // MARK: - Actions
     @IBAction func aboutTopicButtonTapped(_ sender: Any) {
         reloadTableForTopic("About")
+        title = "About"
     }
     
     @IBAction func financialTopicButtonTapped(_ sender: Any) {
-       reloadTableForTopic("Grants & Funding")
+        reloadTableForTopic("Grants & Funding")
+        title = "Grants & Funding"
     }
     
     @IBAction func legalTopicButtonTapped(_ sender: Any) {
         reloadTableForTopic("Legal Support")
+        title = "Legal Support"
+
     }
     
     @IBAction func mentalTopicButtonTapped(_ sender: Any) {
         reloadTableForTopic("Mental Health Support")
+        title = "Mental Health Support"
+
     }
     
     @IBAction func academicTopicButtonTapped(_ sender: Any) {
         reloadTableForTopic("Academic Support")
+        title = "Academic Support"
     }
 
     
@@ -58,6 +65,10 @@ class ListTopicsAndItemsViewController: UIViewController, UITableViewDelegate, U
                 }
             }
         }
+        
+        title = "About"
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -110,7 +121,10 @@ class ListTopicsAndItemsViewController: UIViewController, UITableViewDelegate, U
         return cell
     }
     
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
