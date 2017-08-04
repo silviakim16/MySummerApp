@@ -14,6 +14,7 @@ class ListCollegesViewController: UITableViewController {
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //fetchData()
 
         //Download the data from Firebase using the reference

@@ -17,13 +17,16 @@
 		FBCBB7631F1E708200D16AE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCBB7621F1E708200D16AE1 /* AppDelegate.swift */; };
 		FBCBB7651F1E708200D16AE1 /* ListCollegesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCBB7641F1E708200D16AE1 /* ListCollegesViewController.swift */; };
 		FBCBB7681F1E708200D16AE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCBB7661F1E708200D16AE1 /* Main.storyboard */; };
-		FBCBB76B1F1E708200D16AE1 /* SummerApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBCBB7691F1E708200D16AE1 /* SummerApp.xcdatamodeld */; };
 		FBCBB76D1F1E708200D16AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBCBB76C1F1E708200D16AE1 /* Assets.xcassets */; };
 		FBCBB7701F1E708200D16AE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCBB76E1F1E708200D16AE1 /* LaunchScreen.storyboard */; };
 		FBCBB77E1F1E714900D16AE1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBCBB77D1F1E714900D16AE1 /* GoogleService-Info.plist */; };
 		FBCBB7811F1E744300D16AE1 /* FbDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCBB7801F1E744300D16AE1 /* FbDatabase.swift */; };
 		FBF3E4301F2A587500084DD2 /* ContentStyle.css in Resources */ = {isa = PBXBuildFile; fileRef = FBF3E42F1F2A587500084DD2 /* ContentStyle.css */; };
 		FBF3E4331F2A5B2700084DD2 /* HTMLConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF3E4321F2A5B2700084DD2 /* HTMLConverter.swift */; };
+		FBF3E4351F312DA000084DD2 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF3E4341F312DA000084DD2 /* CoreDataHelper.swift */; };
+		FBF3E43C1F314E8800084DD2 /* SummerApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBF3E43A1F314E8800084DD2 /* SummerApp.xcdatamodeld */; };
+		FBFE9A301F32A34B00F38718 /* ShadowForCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFE9A2F1F32A34B00F38718 /* ShadowForCell.swift */; };
+		FBFE9A331F33CF3000F38718 /* BlueBG.png in Resources */ = {isa = PBXBuildFile; fileRef = FBFE9A321F33CF3000F38718 /* BlueBG.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +43,6 @@
 		FBCBB7621F1E708200D16AE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBCBB7641F1E708200D16AE1 /* ListCollegesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollegesViewController.swift; sourceTree = "<group>"; };
 		FBCBB7671F1E708200D16AE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FBCBB76A1F1E708200D16AE1 /* SummerApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SummerApp.xcdatamodel; sourceTree = "<group>"; };
 		FBCBB76C1F1E708200D16AE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBCBB76F1F1E708200D16AE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBCBB7711F1E708200D16AE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +50,10 @@
 		FBCBB7801F1E744300D16AE1 /* FbDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FbDatabase.swift; sourceTree = "<group>"; };
 		FBF3E42F1F2A587500084DD2 /* ContentStyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = ContentStyle.css; sourceTree = "<group>"; };
 		FBF3E4321F2A5B2700084DD2 /* HTMLConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLConverter.swift; sourceTree = "<group>"; };
+		FBF3E4341F312DA000084DD2 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		FBF3E43B1F314E8800084DD2 /* SummerApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SummerApp.xcdatamodel; sourceTree = "<group>"; };
+		FBFE9A2F1F32A34B00F38718 /* ShadowForCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowForCell.swift; sourceTree = "<group>"; };
+		FBFE9A321F33CF3000F38718 /* BlueBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueBG.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 		FBCBB7561F1E708200D16AE1 = {
 			isa = PBXGroup;
 			children = (
+				FBFE9A311F33CF1A00F38718 /* Images */,
 				FBCBB7611F1E708200D16AE1 /* SummerApp */,
 				FBCBB7601F1E708200D16AE1 /* Products */,
 				876BF6CB55497C8DCA4585EB /* Pods */,
@@ -108,6 +115,8 @@
 				FBCBB7771F1E709D00D16AE1 /* Views */,
 				FBCBB77C1F1E712000D16AE1 /* Supporting */,
 				FBF3E4311F2A5A8C00084DD2 /* HTML and CSS */,
+				FBF3E4361F312DA800084DD2 /* Helper */,
+				FBFE9A2F1F32A34B00F38718 /* ShadowForCell.swift */,
 			);
 			path = SummerApp;
 			sourceTree = "<group>";
@@ -151,7 +160,7 @@
 		FBCBB77B1F1E710500D16AE1 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				FBCBB7691F1E708200D16AE1 /* SummerApp.xcdatamodeld */,
+				FBF3E43A1F314E8800084DD2 /* SummerApp.xcdatamodeld */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -183,6 +192,22 @@
 				FBF3E4321F2A5B2700084DD2 /* HTMLConverter.swift */,
 			);
 			name = "HTML and CSS";
+			sourceTree = "<group>";
+		};
+		FBF3E4361F312DA800084DD2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FBF3E4341F312DA000084DD2 /* CoreDataHelper.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		FBFE9A311F33CF1A00F38718 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FBFE9A321F33CF3000F38718 /* BlueBG.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +245,7 @@
 				TargetAttributes = {
 					FBCBB75E1F1E708200D16AE1 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CMR3UVXYD8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -249,6 +275,7 @@
 			files = (
 				FBF3E4301F2A587500084DD2 /* ContentStyle.css in Resources */,
 				FBCBB7701F1E708200D16AE1 /* LaunchScreen.storyboard in Resources */,
+				FBFE9A331F33CF3000F38718 /* BlueBG.png in Resources */,
 				FBCBB77E1F1E714900D16AE1 /* GoogleService-Info.plist in Resources */,
 				FBCBB76D1F1E708200D16AE1 /* Assets.xcassets in Resources */,
 				FBCBB7681F1E708200D16AE1 /* Main.storyboard in Resources */,
@@ -310,12 +337,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBF3E43C1F314E8800084DD2 /* SummerApp.xcdatamodeld in Sources */,
 				FBCBB7811F1E744300D16AE1 /* FbDatabase.swift in Sources */,
 				FB3235F21F293BA300B83E85 /* ListItemInfoContentViewController.swift in Sources */,
 				FB9070B91F1E8A0F0062F97E /* Item.swift in Sources */,
 				FB9070B51F1E87630062F97E /* School.swift in Sources */,
-				FBCBB76B1F1E708200D16AE1 /* SummerApp.xcdatamodeld in Sources */,
 				FBCBB7651F1E708200D16AE1 /* ListCollegesViewController.swift in Sources */,
+				FBF3E4351F312DA000084DD2 /* CoreDataHelper.swift in Sources */,
+				FBFE9A301F32A34B00F38718 /* ShadowForCell.swift in Sources */,
 				FBF3E4331F2A5B2700084DD2 /* HTMLConverter.swift in Sources */,
 				FB5AD2741F229DA500080BA8 /* Schools.swift in Sources */,
 				FBCBB7631F1E708200D16AE1 /* AppDelegate.swift in Sources */,
@@ -387,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -431,7 +460,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -444,10 +473,14 @@
 			baseConfigurationReference = 7A3AEB9665659D77E05BE836 /* Pods-SummerApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = CMR3UVXYD8;
 				INFOPLIST_FILE = SummerApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.myApp.ios-com.myApp.ios-com.myApp.ios-com.myApp.ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -458,10 +491,14 @@
 			baseConfigurationReference = C4075B127ABD5094E32350E8 /* Pods-SummerApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = CMR3UVXYD8;
 				INFOPLIST_FILE = SummerApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.myApp.ios-com.myApp.ios-com.myApp.ios-com.myApp.ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -491,12 +528,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		FBCBB7691F1E708200D16AE1 /* SummerApp.xcdatamodeld */ = {
+		FBF3E43A1F314E8800084DD2 /* SummerApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				FBCBB76A1F1E708200D16AE1 /* SummerApp.xcdatamodel */,
+				FBF3E43B1F314E8800084DD2 /* SummerApp.xcdatamodel */,
 			);
-			currentVersion = FBCBB76A1F1E708200D16AE1 /* SummerApp.xcdatamodel */;
+			currentVersion = FBF3E43B1F314E8800084DD2 /* SummerApp.xcdatamodel */;
 			path = SummerApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

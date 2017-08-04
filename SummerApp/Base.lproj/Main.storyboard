@@ -81,37 +81,45 @@
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="og3-Sd-C9Q">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.99991267920000004" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <barButtonItem image="icons8-US Dollar-35" width="29" id="XOg-e2-haw" userLabel="Financial">
+                                    <barButtonItem image="icons8-US Dollar Filled-100" width="29" id="XOg-e2-haw" userLabel="Financial">
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="financialTopicButtonTapped:" destination="9jG-o8-SQV" id="eQ8-9m-yGB"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="epp-rm-4kM"/>
-                                    <barButtonItem image="icons8-Law-35" id="eYw-Ga-059" userLabel="Legal">
+                                    <barButtonItem image="icons8-Law Filled-100" id="eYw-Ga-059" userLabel="Legal">
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="legalTopicButtonTapped:" destination="9jG-o8-SQV" id="U0a-F2-7Yv"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="dAy-b3-7OO"/>
-                                    <barButtonItem image="icons8-University-35" id="dAw-IQ-DlI" userLabel="About">
+                                    <barButtonItem image="icons8-University Filled-100" id="dAw-IQ-DlI" userLabel="About">
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="aboutTopicButtonTapped:" destination="9jG-o8-SQV" id="k84-5z-FpG"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="WyZ-58-SCr"/>
-                                    <barButtonItem image="icons8-Wise Mind-35" id="Eu5-pC-Nhu" userLabel="Mental Health">
+                                    <barButtonItem image="icons8-Wise Mind Filled-100" id="Eu5-pC-Nhu" userLabel="Mental Health">
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="mentalTopicButtonTapped:" destination="9jG-o8-SQV" id="o0h-ZR-VUp"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mfu-c6-O6o"/>
-                                    <barButtonItem image="icons8-Graduation Cap-35" id="K9Y-rU-H1r" userLabel="Academic">
+                                    <barButtonItem image="icons8-Graduation Cap Filled-100" id="K9Y-rU-H1r" userLabel="Academic">
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="academicTopicButtonTapped:" destination="9jG-o8-SQV" id="Amp-MA-XeL"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -127,6 +135,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="kIx-ex-3xD"/>
                     <connections>
+                        <outlet property="aboutTopicButton" destination="dAw-IQ-DlI" id="kIk-Qh-tgV"/>
+                        <outlet property="academicTopicButton" destination="K9Y-rU-H1r" id="z3v-eZ-EMp"/>
+                        <outlet property="financialTopicButton" destination="XOg-e2-haw" id="GLj-PL-swL"/>
+                        <outlet property="legalTopicButton" destination="eYw-Ga-059" id="nLF-dw-Tyn"/>
+                        <outlet property="mentalHealthTopicButton" destination="Eu5-pC-Nhu" id="uUA-Gm-qMQ"/>
                         <outlet property="tableView" destination="OBn-ad-czh" id="q3r-gk-zpw"/>
                     </connections>
                 </viewController>
@@ -173,7 +186,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s4W-nO-DH7" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5we-tf-ZZO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5we-tf-ZZO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -188,10 +201,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-Graduation Cap-35" width="35" height="35"/>
-        <image name="icons8-Law-35" width="35" height="35"/>
-        <image name="icons8-US Dollar-35" width="35" height="35"/>
-        <image name="icons8-University-35" width="35" height="35"/>
-        <image name="icons8-Wise Mind-35" width="35" height="35"/>
+        <image name="icons8-Graduation Cap Filled-100" width="25" height="25"/>
+        <image name="icons8-Law Filled-100" width="25" height="25"/>
+        <image name="icons8-US Dollar Filled-100" width="25" height="25"/>
+        <image name="icons8-University Filled-100" width="25" height="25"/>
+        <image name="icons8-Wise Mind Filled-100" width="25" height="25"/>
     </resources>
 </document>

@@ -17,6 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        //Changes statuBar color to white based on the color of the nav bar.
+        //Added viewController based status bar appearance in pList file
+        UIApplication.shared.statusBarStyle = .lightContent
+
+        //Changes the title text of the nav bar to white bc it's against a blue background
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
+        //Adds color to the nav bar. This case is blue
+        UINavigationBar.appearance().barTintColor = UIColor(red: 33.0/255.0, green: 150.0/255.0, blue: 243.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UIApplication.shared.statusBarStyle = .lightContent
+        
         // Override point for customization after application launch.
         
         //First we connect our app to Firebase

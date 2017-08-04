@@ -10,6 +10,7 @@ class Item {
     
     var name: String
     var htmlString: String = ""
+    var mainTitle = ""
     
     init(name: String) {
         self.name = name
@@ -17,6 +18,6 @@ class Item {
     
     func loadItemInfo(from itemInfoDictionary: [String: Any]) {
         htmlString = HTMLConverter.generateHTMLString(from: itemInfoDictionary)
-        print(htmlString)
+        //print(htmlString)
     }
 }

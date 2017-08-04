@@ -25,7 +25,8 @@ class Schools {
                 
                 //print("\(#function) KEY: \(key)")
                 
-                //School: U making a new school object and adding it to the schools array.
+                //School: You're making a new school object and adding it to the schools array.
+                
                 schools.append(School(name: key))
             }
             

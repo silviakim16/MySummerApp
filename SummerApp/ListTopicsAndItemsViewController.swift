@@ -19,33 +19,70 @@ class ListTopicsAndItemsViewController: UIViewController, UITableViewDelegate, U
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var financialTopicButton: UIBarButtonItem!
+    @IBOutlet weak var legalTopicButton: UIBarButtonItem!
+    @IBOutlet weak var aboutTopicButton: UIBarButtonItem!
+    @IBOutlet weak var mentalHealthTopicButton: UIBarButtonItem!
+    @IBOutlet weak var academicTopicButton: UIBarButtonItem!
+    
     
     // MARK: - Actions
     @IBAction func aboutTopicButtonTapped(_ sender: Any) {
         reloadTableForTopic("About")
         title = "About"
+        
+//        aboutTopicButton.tintColor = UIColor.whitec        
+        aboutTopicButton.tintColor = UIColor(red: 0.0/255.0, green: 122.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+//        aboutTopicButton.appearance = UIFont(name: "Avenir", size: 30)
+        financialTopicButton.tintColor = UIColor.darkGray
+        legalTopicButton.tintColor = UIColor.darkGray
+        mentalHealthTopicButton.tintColor = UIColor.darkGray
+        academicTopicButton.tintColor = UIColor.darkGray
+        
     }
     
     @IBAction func financialTopicButtonTapped(_ sender: Any) {
         reloadTableForTopic("Grants & Funding")
         title = "Grants & Funding"
+        financialTopicButton.tintColor = UIColor(red: 0.0/255.0, green: 122.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        aboutTopicButton.tintColor = UIColor.darkGray
+        legalTopicButton.tintColor = UIColor.darkGray
+        mentalHealthTopicButton.tintColor = UIColor.darkGray
+        academicTopicButton.tintColor = UIColor.darkGray
+
     }
     
     @IBAction func legalTopicButtonTapped(_ sender: Any) {
         reloadTableForTopic("Legal Support")
         title = "Legal Support"
+        legalTopicButton.tintColor = UIColor(red: 0.0/255.0, green: 122.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        aboutTopicButton.tintColor = UIColor.darkGray
+        financialTopicButton.tintColor = UIColor.darkGray
+        mentalHealthTopicButton.tintColor = UIColor.darkGray
+        academicTopicButton.tintColor = UIColor.darkGray
 
     }
     
     @IBAction func mentalTopicButtonTapped(_ sender: Any) {
         reloadTableForTopic("Mental Health Support")
         title = "Mental Health Support"
+        mentalHealthTopicButton.tintColor = UIColor(red: 0.0/255.0, green: 122.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+//        mentalHealthTopicButton.setBackgroundImage(#imageLiteral(resourceName: "BlueBG"), for: UIControlState.selected, barMetrics: UIBarMetrics.default)
+        aboutTopicButton.tintColor = UIColor.darkGray
+        legalTopicButton.tintColor = UIColor.darkGray
+        financialTopicButton.tintColor = UIColor.darkGray
+        academicTopicButton.tintColor = UIColor.darkGray
 
     }
     
     @IBAction func academicTopicButtonTapped(_ sender: Any) {
         reloadTableForTopic("Academic Support")
         title = "Academic Support"
+        academicTopicButton.tintColor = UIColor(red: 0.0/255.0, green: 122.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        aboutTopicButton.tintColor = UIColor.darkGray
+        legalTopicButton.tintColor = UIColor.darkGray
+        mentalHealthTopicButton.tintColor = UIColor.darkGray
+        financialTopicButton.tintColor = UIColor.darkGray
     }
 
     
@@ -68,7 +105,14 @@ class ListTopicsAndItemsViewController: UIViewController, UITableViewDelegate, U
         
         title = "About"
         
-        
+        aboutTopicButton.tintColor = UIColor(red: 0.0/255.0, green: 122.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+
+
+//        financialTopicButton.tintColor = UIColor.blue
+//        academicTopicButton.tintColor = UIColor.blue
+//        legalTopicButton.tintColor = UIColor.blue
+//        aboutTopicButton.tintColor = UIColor.blue
+//        mentalHealthTopicButton.tintColor = UIColor.blue
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

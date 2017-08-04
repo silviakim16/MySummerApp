@@ -20,7 +20,11 @@ class HTMLConverter {
     //enum is collection of similar values. Can only equal to one thing at a time. 
     //AKA if u have enum for heading, it can't apply same to paragraph and what not
     private enum HTMLElement {
-        case heading, paragraph, subtitle
+        case heading, paragraph, subtitle, tableUpdate
+    }
+    
+    private enum TableType {
+        case update
     }
     
     private class func appendIntro() {
@@ -34,7 +38,19 @@ class HTMLConverter {
         case .heading: context += "<h1>\(stringValue)</h1>"
         case .subtitle: context += "<h2>\(stringValue)</h2>"
         case .paragraph: context += "<p>\(stringValue)</p>"
+        case .tableUpdate: context += insertIntoTable(stringValue, ofType: .update)
         }
+    }
+    
+    private class func insertIntoTable(_ stringValue: String, ofType tableType: TableType) -> String {
+        
+        var tableTitle = ""
+        switch tableType {
+        case .update: tableTitle = "UPDATE"
+        }
+        
+        return "<table class=\"updateTable\"><tr><td><p align=\"center\"><b>\(tableTitle)</b>" +
+        "<p></td></tr><tr><td><p>\(stringValue)</p></td></tr></table>"
     }
     
     //clears context so dat u can load a new one the next time it gets used
@@ -63,31 +79,45 @@ class HTMLConverter {
         //Repeat is sayign keep doing dis over and over again, until this while part is false.
         repeat {
             if let title = item["Title\(titleIndex)"] as? String {
+                
                 didFindValue = true
-                HTMLConverter.append(title, in: .heading)
-                isPreviousStringAParagraph = false
                 
-                //The subtitle MUST have the same number as the title it should be under
-                if let subTitle = item["Subtitle\(titleIndex)"] as? String {
-                    HTMLConverter.append(subTitle, in: .subtitle)
+                //If the index is 1, then that is the main title, which adds it to the heading in html
+                //The rest will be considered as subtitles.
+                if titleIndex == 1 {
+                    HTMLConverter.append(title, in: .heading)
+                } else {
+                    HTMLConverter.append(title, in: .subtitle)
                 }
-            }
                 
+                isPreviousStringAParagraph = false
+            }
             else {
                 didFindValue = false
             }
+            
             //
             //This loop will find the paragraphs
             repeat {
+                
                 //If it found a paragraph, access that specific paragraph with ["Paragraph\(Titlendex)(paragraphIndex)"]
                 //convert it into String and assign it to paragraph variable
                 if let paragraph = item["P\(titleIndex)\(paragraphIndex)"] as? String {
                     didFindValue = true
-                    HTMLConverter.append(paragraph, in: .paragraph)
+                    
+                    if paragraph.contains("UPDATE") {
+                        
+                        let paragraphFixed = paragraph.replacingOccurrences(of: "UPDATE", with: "")
+                        (HTMLConverter.append(paragraphFixed, in: .tableUpdate))
+                    }
+                    else {
+                        HTMLConverter.append(paragraph, in: .paragraph)
+                    }
                     
                     isPreviousStringAParagraph = true
                     paragraphIndex += 1
                 }
+
                 else {
                     isPreviousStringAParagraph = false
                 }

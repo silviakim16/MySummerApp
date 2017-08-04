@@ -23,6 +23,7 @@ class School {
             
             //print("\(#function) KEY: \(key)")
             topics.append(Topic(name: key))
+            
         }
         
         //loops through each topic in the topics array
