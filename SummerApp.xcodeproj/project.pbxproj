@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0270099282E09939B6E3963D /* Pods_SummerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BFF3ADE70127E10AAEBE8B /* Pods_SummerApp.framework */; };
 		FB3235F21F293BA300B83E85 /* ListItemInfoContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3235F11F293BA300B83E85 /* ListItemInfoContentViewController.swift */; };
+		FB5AA6B71F3A2CB500F2051C /* UCBerkeleyBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB5AA6B61F3A2CB500F2051C /* UCBerkeleyBG.jpg */; };
+		FB5AA6B91F3A2EDE00F2051C /* SchoolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5AA6B81F3A2EDE00F2051C /* SchoolCell.swift */; };
+		FB5AA6BB1F3A378900F2051C /* TopicsAndItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5AA6BA1F3A378900F2051C /* TopicsAndItemsCell.swift */; };
 		FB5AD2741F229DA500080BA8 /* Schools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5AD2731F229DA500080BA8 /* Schools.swift */; };
 		FB5AD27C1F2677D800080BA8 /* ListTopicsAndItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5AD27B1F2677D800080BA8 /* ListTopicsAndItemsViewController.swift */; };
 		FB9070B51F1E87630062F97E /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9070B41F1E87630062F97E /* School.swift */; };
@@ -34,6 +37,9 @@
 		7A3AEB9665659D77E05BE836 /* Pods-SummerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SummerApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SummerApp/Pods-SummerApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C4075B127ABD5094E32350E8 /* Pods-SummerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SummerApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SummerApp/Pods-SummerApp.release.xcconfig"; sourceTree = "<group>"; };
 		FB3235F11F293BA300B83E85 /* ListItemInfoContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemInfoContentViewController.swift; sourceTree = "<group>"; };
+		FB5AA6B61F3A2CB500F2051C /* UCBerkeleyBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = UCBerkeleyBG.jpg; sourceTree = "<group>"; };
+		FB5AA6B81F3A2EDE00F2051C /* SchoolCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolCell.swift; sourceTree = "<group>"; };
+		FB5AA6BA1F3A378900F2051C /* TopicsAndItemsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsAndItemsCell.swift; sourceTree = "<group>"; };
 		FB5AD2731F229DA500080BA8 /* Schools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schools.swift; sourceTree = "<group>"; };
 		FB5AD27B1F2677D800080BA8 /* ListTopicsAndItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTopicsAndItemsViewController.swift; sourceTree = "<group>"; };
 		FB9070B41F1E87630062F97E /* School.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
@@ -116,7 +122,6 @@
 				FBCBB77C1F1E712000D16AE1 /* Supporting */,
 				FBF3E4311F2A5A8C00084DD2 /* HTML and CSS */,
 				FBF3E4361F312DA800084DD2 /* Helper */,
-				FBFE9A2F1F32A34B00F38718 /* ShadowForCell.swift */,
 			);
 			path = SummerApp;
 			sourceTree = "<group>";
@@ -124,6 +129,9 @@
 		FBCBB7771F1E709D00D16AE1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FBFE9A2F1F32A34B00F38718 /* ShadowForCell.swift */,
+				FB5AA6B81F3A2EDE00F2051C /* SchoolCell.swift */,
+				FB5AA6BA1F3A378900F2051C /* TopicsAndItemsCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -205,6 +213,7 @@
 		FBFE9A311F33CF1A00F38718 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FB5AA6B61F3A2CB500F2051C /* UCBerkeleyBG.jpg */,
 				FBFE9A321F33CF3000F38718 /* BlueBG.png */,
 			);
 			name = Images;
@@ -279,6 +288,7 @@
 				FBCBB77E1F1E714900D16AE1 /* GoogleService-Info.plist in Resources */,
 				FBCBB76D1F1E708200D16AE1 /* Assets.xcassets in Resources */,
 				FBCBB7681F1E708200D16AE1 /* Main.storyboard in Resources */,
+				FB5AA6B71F3A2CB500F2051C /* UCBerkeleyBG.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,8 +352,10 @@
 				FB3235F21F293BA300B83E85 /* ListItemInfoContentViewController.swift in Sources */,
 				FB9070B91F1E8A0F0062F97E /* Item.swift in Sources */,
 				FB9070B51F1E87630062F97E /* School.swift in Sources */,
+				FB5AA6BB1F3A378900F2051C /* TopicsAndItemsCell.swift in Sources */,
 				FBCBB7651F1E708200D16AE1 /* ListCollegesViewController.swift in Sources */,
 				FBF3E4351F312DA000084DD2 /* CoreDataHelper.swift in Sources */,
+				FB5AA6B91F3A2EDE00F2051C /* SchoolCell.swift in Sources */,
 				FBFE9A301F32A34B00F38718 /* ShadowForCell.swift in Sources */,
 				FBF3E4331F2A5B2700084DD2 /* HTMLConverter.swift in Sources */,
 				FB5AD2741F229DA500080BA8 /* Schools.swift in Sources */,

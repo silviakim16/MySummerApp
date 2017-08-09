@@ -6,35 +6,60 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--School-->
+        <!--Schools-->
         <scene sceneID="an9-hr-rSG">
             <objects>
                 <tableViewController id="tbN-8C-nql" customClass="ListCollegesViewController" customModule="SummerApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eIw-Wh-fVa">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="170" sectionHeaderHeight="28" sectionFooterHeight="28" id="eIw-Wh-fVa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCollegesTableViewCell" textLabel="POb-TE-jYB" style="IBUITableViewCellStyleDefault" id="gRq-WU-ymf" customClass="ListCollegesTableViewCell" customModule="SummerApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCollegesTableViewCell" rowHeight="170" id="gRq-WU-ymf" customClass="SchooolCell" customModule="SummerApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gRq-WU-ymf" id="mvW-N7-xBX">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="POb-TE-jYB">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwV-Ux-hoZ" customClass="ShadowStyleView" customModule="SummerApp" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="8" width="359" height="154"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hLR-dv-fwf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="154"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxh-1j-Zpc">
+                                                    <rect key="frame" x="151" y="61" width="56" height="30.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="kxh-1j-Zpc" firstAttribute="centerY" secondItem="WwV-Ux-hoZ" secondAttribute="centerY" id="GAM-e8-QTo"/>
+                                                <constraint firstItem="kxh-1j-Zpc" firstAttribute="centerX" secondItem="WwV-Ux-hoZ" secondAttribute="centerX" id="GgF-q4-R3d"/>
+                                                <constraint firstAttribute="bottom" secondItem="hLR-dv-fwf" secondAttribute="bottom" id="I9i-J8-Z8O"/>
+                                                <constraint firstItem="hLR-dv-fwf" firstAttribute="top" secondItem="WwV-Ux-hoZ" secondAttribute="top" id="knl-px-m2j"/>
+                                                <constraint firstAttribute="trailing" secondItem="hLR-dv-fwf" secondAttribute="trailing" id="qGD-j2-tzO"/>
+                                                <constraint firstItem="hLR-dv-fwf" firstAttribute="leading" secondItem="WwV-Ux-hoZ" secondAttribute="leading" id="tTa-at-DgM"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="WwV-Ux-hoZ" firstAttribute="leading" secondItem="mvW-N7-xBX" secondAttribute="leading" constant="8" id="2XY-PG-p2y"/>
+                                        <constraint firstItem="WwV-Ux-hoZ" firstAttribute="top" secondItem="mvW-N7-xBX" secondAttribute="top" constant="8" id="5Zr-JK-03l"/>
+                                        <constraint firstAttribute="bottom" secondItem="WwV-Ux-hoZ" secondAttribute="bottom" constant="8" id="BBe-wn-fhf"/>
+                                        <constraint firstAttribute="trailing" secondItem="WwV-Ux-hoZ" secondAttribute="trailing" constant="8" id="j3n-e4-Gay"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="schoolBackground" destination="hLR-dv-fwf" id="P8J-py-NzT"/>
+                                    <outlet property="schoolName" destination="kxh-1j-Zpc" id="Umk-87-NJW"/>
                                     <segue destination="9jG-o8-SQV" kind="show" identifier="displayTopicsAndItemsSegue" id="sGR-bz-cZU"/>
                                 </connections>
                             </tableViewCell>
@@ -44,7 +69,7 @@
                             <outlet property="delegate" destination="tbN-8C-nql" id="diK-iS-5oB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="School" id="gVT-yb-OjS"/>
+                    <navigationItem key="navigationItem" title="Schools" id="gVT-yb-OjS"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5W-Va-wSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,18 +87,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OBn-ad-czh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OBn-ad-czh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="topicItemsCellIdentifier" id="g06-Te-ciz">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="topicItemsCellIdentifier" rowHeight="60" id="g06-Te-ciz" userLabel="topic Items Cell" customClass="TopicsAndItemsCell" customModule="SummerApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g06-Te-ciz" id="UFy-AQ-VAe">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fps-Ca-JuG">
+                                                    <rect key="frame" x="16" y="17" width="343" height="25"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                    <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Fps-Ca-JuG" firstAttribute="leading" secondItem="UFy-AQ-VAe" secondAttribute="leadingMargin" constant="8" id="Svj-IQ-xgM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Fps-Ca-JuG" secondAttribute="trailing" constant="8" id="UEU-vR-gxb"/>
+                                                <constraint firstItem="Fps-Ca-JuG" firstAttribute="centerY" secondItem="UFy-AQ-VAe" secondAttribute="centerY" id="ZPI-Hs-MAp"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="itemLabel" destination="Fps-Ca-JuG" id="xAF-fe-B37"/>
                                             <segue destination="bGV-Tt-tvN" kind="show" identifier="displayItemInfoContentSegue" id="Fp8-rv-3KS"/>
                                         </connections>
                                     </tableViewCell>
@@ -125,12 +164,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="og3-Sd-C9Q" secondAttribute="trailing" id="0cC-mZ-P3o"/>
-                            <constraint firstAttribute="trailing" secondItem="OBn-ad-czh" secondAttribute="trailing" id="Bgy-9z-Tgf"/>
+                            <constraint firstItem="og3-Sd-C9Q" firstAttribute="top" secondItem="OBn-ad-czh" secondAttribute="bottom" id="2UZ-hj-aeO"/>
                             <constraint firstItem="n8u-3v-34Y" firstAttribute="top" secondItem="og3-Sd-C9Q" secondAttribute="bottom" id="CV4-YY-g5j"/>
                             <constraint firstItem="og3-Sd-C9Q" firstAttribute="leading" secondItem="feE-li-imD" secondAttribute="leading" id="DBM-qB-ulH"/>
-                            <constraint firstItem="OBn-ad-czh" firstAttribute="leading" secondItem="feE-li-imD" secondAttribute="leading" id="bZa-bT-qif"/>
-                            <constraint firstItem="OBn-ad-czh" firstAttribute="top" secondItem="feE-li-imD" secondAttribute="top" id="f2q-ay-jeV"/>
-                            <constraint firstItem="n8u-3v-34Y" firstAttribute="top" secondItem="OBn-ad-czh" secondAttribute="bottom" id="qnV-NC-lgk"/>
+                            <constraint firstAttribute="trailing" secondItem="OBn-ad-czh" secondAttribute="trailing" id="VE9-4y-Heo"/>
+                            <constraint firstItem="OBn-ad-czh" firstAttribute="top" secondItem="feE-li-imD" secondAttribute="top" id="aHD-aw-bGU"/>
+                            <constraint firstItem="OBn-ad-czh" firstAttribute="leading" secondItem="feE-li-imD" secondAttribute="leading" id="ust-Rv-lIA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="kIx-ex-3xD"/>
@@ -162,7 +201,7 @@
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJE-ZI-67c">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -186,7 +225,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s4W-nO-DH7" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5we-tf-ZZO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5we-tf-ZZO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

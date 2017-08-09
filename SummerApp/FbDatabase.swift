@@ -8,12 +8,15 @@
 
 import Foundation
 import FirebaseDatabase
+import FirebaseStorage
 
 class FbDatabase {
     
-    static let ref = Database.database().reference()
-    
+    // MARK: - Variables
     static var shared = FbDatabase()
+    static let ref = Database.database().reference()
+    static let storageRef = Storage.storage()
+    
     
     static func resetSharedDatabase() {
         FbDatabase.shared = FbDatabase()

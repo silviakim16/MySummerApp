@@ -28,7 +28,8 @@ p {
 .updateTable {
     border: 4px solid rgb(255, 5, 128);
     border-spacing: 15px;
-    background-color: rgb(255, 250, 232);
+    /*bckground-color: rgb(255, 250, 232);*/
+    background-color: rgb(255, 192, 203);
     margin-bottom: 40px;
     width: 100%;
 }

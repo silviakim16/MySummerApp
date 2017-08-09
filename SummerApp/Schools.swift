@@ -7,17 +7,22 @@
 //
 
 import Foundation
+import UIKit
 
 class Schools {
     
     static var shared = Schools()
     
     var schools: [School] = []
+    var images: [String: UIImage] = [:]
+    
     
     //extracts the data into their own classes
     func loadSchools(from dictionary: [String: Any]) {
         
         FbDatabase.resetSharedDatabase()
+        
+        loadImages(from: dictionary)
         
         if let schoolsDictionary = dictionary["Schools"] as? [String: Any] {
             
@@ -43,4 +48,26 @@ class Schools {
             }
         }
     }
+    
+    
+    private func loadImages(from dictionary: [String: Any]) {
+        
+        if let imagesDictionary = dictionary["Backgrounds"] as? [String: Any] {
+            
+            for (schoolName, urlToImage) in imagesDictionary {
+                
+                if let url = NSURL(string: urlToImage as! String),
+                    let data = NSData(contentsOf: url as URL),
+                    let image = UIImage(data: data as Data) {
+                    
+                    images[schoolName] = image
+                }
+            }
+        }
+    }
 }
+
+
+
+
+

@@ -8,6 +8,7 @@ target 'SummerApp' do
   # Pods for SummerApp
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
 
 
 end

@@ -35,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //First we connect our app to Firebase
         FirebaseApp.configure()
         
+        preloadWebView()
+        
         return true
     }
 
@@ -90,6 +92,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
+    
+    // MARK: - Presaving the css and html
+    
+    private func preloadWebView() {
+        let webView: UIWebView = UIWebView()
+        webView.loadHTMLString("<head></head>", baseURL: Bundle.main.url(forResource: "ContentStyle", withExtension: "css"))
+    }
+    
+    
+    
 
     // MARK: - Core Data Saving support
 

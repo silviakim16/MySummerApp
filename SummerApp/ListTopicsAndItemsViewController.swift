@@ -14,6 +14,7 @@ class ListTopicsAndItemsViewController: UIViewController, UITableViewDelegate, U
     var selectedSchool: School?
     var topic: Topic?
     var selectedTopicName: String = "About"
+    var tempArray = [String]()
 
     
     // MARK: - Outlets
@@ -92,6 +93,8 @@ class ListTopicsAndItemsViewController: UIViewController, UITableViewDelegate, U
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        
 
         //The table view starts out in About section
         if selectedSchool != nil {
@@ -153,13 +156,13 @@ class ListTopicsAndItemsViewController: UIViewController, UITableViewDelegate, U
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "topicItemsCellIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "topicItemsCellIdentifier", for: indexPath) as! TopicsAndItemsCell
         let row = indexPath.row
 
         if topic != nil {
-            cell.textLabel!.text = topic!.items[row].name
+            cell.itemLabel.text = topic!.items[row].name
         } else {
-            cell.textLabel!.text = "Failed to download data."
+            cell.itemLabel.text = "Failed to download data."
         }
         
         return cell
@@ -169,6 +172,9 @@ class ListTopicsAndItemsViewController: UIViewController, UITableViewDelegate, U
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
     /*
     // MARK: - Navigation
 
