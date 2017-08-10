@@ -15,6 +15,7 @@ class FbDatabase {
     // MARK: - Variables
     static var shared = FbDatabase()
     static let ref = Database.database().reference()
+    static let connectedRef = Database.database().reference(withPath: ".info/connected")
     static let storageRef = Storage.storage()
     
     
