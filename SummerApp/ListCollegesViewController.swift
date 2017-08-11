@@ -28,7 +28,8 @@ class ListCollegesViewController: UITableViewController {
         } else {
             //It will only get here when the data was already downloaded before; 
             //therefore, we need to load it from wherever it's saved
-            
+            Schools.loadData()
+            //tableView.reloadData()
         }
         
         
@@ -139,8 +140,10 @@ class ListCollegesViewController: UITableViewController {
     
     func refreshWhenScrollDown(sender: UIRefreshControl) {
         //Here we will redownload the data from Firebase to update it
-        checkConnectionAndDownload()
-        refreshControl?.endRefreshing()
+        if !didFailInternetConnection {
+            checkConnectionAndDownload()
+        }
+        refreshControl!.endRefreshing()
     }
 
     
@@ -158,7 +161,7 @@ class ListCollegesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listCollegesTableViewCell", for: indexPath) as! SchooolCell
         cell.selectionStyle = .none
         
-        if didDownloadData {
+        if UserDefaults.standard.value(forKey: "didDownloadData") != nil {
             cell.schoolName.textColor = UIColor.white
             //retrieving current row
             let row = indexPath.row

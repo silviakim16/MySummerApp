@@ -17,6 +17,17 @@ class Schools: NSObject, NSCoding {
     var images: [String: UIImage] = [:]
     var lastUpdatedDate: Date!
     
+    enum UDKeys: String {
+        case schools
+        case images
+        case lastUpdatedDate
+        case schoolsArchivedData
+        
+        var key: String {
+            return "Schools" + self.rawValue + "Key"
+        }
+    }
+    
     
     //Removes the warning to initilize the shared object
     override init() {
@@ -27,26 +38,27 @@ class Schools: NSObject, NSCoding {
     // MARK: - Encoding
     public func encode(with aCoder: NSCoder) {
         //This function will save the data
-        aCoder.encode(schools, forKey: "SchoolsKey")
-        aCoder.encode(images, forKey: "ImagesKey")
-        aCoder.encode(lastUpdatedDate, forKey: "LastUpdatedDateKey")
+        aCoder.encode(schools, forKey: UDKeys.schools.key)
+        aCoder.encode(images, forKey: UDKeys.images.key)
+        aCoder.encode(lastUpdatedDate, forKey: UDKeys.lastUpdatedDate.key)
     }
     
     public required init?(coder aDecoder: NSCoder) {
         //This function will load the saved data
-        schools = aDecoder.decodeObject(forKey: "SchoolsKey") as! [School]
-        images = aDecoder.decodeObject(forKey: "ImagesKey") as! [String: UIImage]
-        lastUpdatedDate = aDecoder.decodeObject(forKey: "LastUpdatedDateKey") as! Date!
+        schools = aDecoder.decodeObject(forKey: UDKeys.schools.key) as! [School]
+        images = aDecoder.decodeObject(forKey: UDKeys.images.key) as! [String: UIImage]
+        lastUpdatedDate = aDecoder.decodeObject(forKey: UDKeys.lastUpdatedDate.key) as! Date!
     }
     
     class func saveData() {
         let data = NSKeyedArchiver.archivedData(withRootObject: Schools.shared)
-        UserDefaults.standard.set(data, forKey: "SchoolsArchivedDataKeys")
+        UserDefaults.standard.set(data, forKey: UDKeys.schoolsArchivedData.key)
+        UserDefaults.standard.synchronize()
     }
     
     //This func loads the savedData
     class func loadData() {
-        if let data = UserDefaults.standard.value(forKey: "SchoolsArchivedDataKeys") as? Data {
+        if let data = UserDefaults.standard.value(forKey: UDKeys.schoolsArchivedData.key) as? Data {
             Schools.shared = NSKeyedUnarchiver.unarchiveObject(with: data)  as! Schools
         }
     }
@@ -92,6 +104,7 @@ class Schools: NSObject, NSCoding {
                     
                     //Loads the topics of the topicDictionary of the school selected
                     school.loadTopics(from: topicsDictionary)
+                    Schools.saveData()
                 }
             }
         }

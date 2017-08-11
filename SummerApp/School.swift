@@ -8,10 +8,20 @@
 
 import Foundation
 
-class School {
+class School: NSObject, NSCoding{
     
     let name: String
     var topics: [Topic] = []
+    
+    enum UDKeys: String {
+        case name
+        case topics
+        
+        var key: String {
+            return "School" + self.rawValue + "Key"
+        }
+    }
+
     
     init(name: String) {
         self.name = name
@@ -35,5 +45,18 @@ class School {
                 topic.loadItems(from: itemsDictionary)
             }
         }
+    }
+    
+    // MARK: - Encoding
+    public func encode(with aCoder: NSCoder) {
+        //This function will save the data
+        aCoder.encode(name, forKey: UDKeys.name.key)
+        aCoder.encode(topics, forKey: UDKeys.topics.key)
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        //This function will load the saved data
+        name = aDecoder.decodeObject(forKey: UDKeys.name.key) as! String
+        topics = aDecoder.decodeObject(forKey: UDKeys.topics.key) as! [Topic]
     }
 }
